@@ -34,35 +34,35 @@ Userinterface
 All mechanical components of the solar tracker were designed and modeled in SolidWorks, including the frame, base, and moving platform. The CAD work ensured correct integration of actuators and stepper motors, while load-bearing structures were dimensioned according to wind and snow load requirements. SolidWorks simulations were used to evaluate stresses, deflections, and safety factors, providing a reliable digital twin before prototyping. In addition, the software enabled the creation of assembly drawings and a complete Bill of Materials (BOM), which guided both sourcing and manufacturing.
 
 <p align="center">
-  <span>
+  <a href="#" onclick="return false;">
     <img src="https://github.com/user-attachments/assets/0838fa04-7584-4766-96a2-39260b3518dc" width="650">
-  </span>
+  </a>
 </p>
 
 ## Userinterface
 The user interface was developed in Node-RED to provide both monitoring and control of the solar tracker. It includes a control panel with multiple operating modes, such as WindSafe and SnowClear, as well as manual and autonomous tracking modes. Real-time data, including environmental conditions and system status, is automatically updated and visualized through dashboards. The interface also integrates mapping functionality to show location and orientation, while Node-RED manages communication between all modules via MQTT and serial protocols, ensuring seamless interaction across devices.
 
 <p align="center">
-  <span>
+  <a href="#" onclick="return false;">
     <img src="https://github.com/user-attachments/assets/ffadf97d-d8f7-41ee-bcbc-125c76575e87" width="650">
-  </span>
+  </a>
 </p>
 
 ## SolarPy Algorithm
 The SolarPy algorithm is the core of the autonomous tracking system, ensuring precise alignment of the panel with the sun. Using real-time GPS data (latitude, longitude, and UTC) combined with compass orientation, the algorithm calculates the solar azimuth and altitude angles based on astronomical formulas. These values are continuously transmitted via MQTT to the motor controllers, where the stepper motor adjusts the azimuth axis and the actuator regulates the altitude axis. Built-in error handling ensures stable operation during temporary data loss, while calibration offsets align the mathematical model with the physical system. Together, this provides accurate, robust, and real-time solar tracking that maximizes energy yield and adapts to environmental conditions.
 
 <p align="center">
-<a href="#">
-  <img width="300" height="400" alt="flowchart_english_professional" src="https://github.com/user-attachments/assets/00643a5b-e4c5-42fc-80ba-b44db830c5d6" />
-</a>
+  <a href="#" onclick="return false;">
+    <img width="300" height="400" alt="flowchart_english_professional" src="https://github.com/user-attachments/assets/00643a5b-e4c5-42fc-80ba-b44db830c5d6" />
+  </a>
 </p>
 
 ### Sponsors
 This project was made possible through the generous support of both national and international companies. Their contributions enabled the development of a full-scale prototype by providing essential components, funding, and expertise. I am sincerely grateful for their involvement and commitment, which played a crucial role in the successful completion of my bachelor thesis. This project received the highest possible grade (12 on the Danish scale, equivalent to an A/A+ in the US/UK system). More importantly, it was acknowledged with excellent feedback from both professors, researchers, and industry representatives.
 
 <p align="center">
-  <span>
+  <a href="#" onclick="return false;">
     <img src="https://github.com/user-attachments/assets/230a9b36-540c-43ec-a875-e37b6a219dcf" width="650">
-  </span>
+  </a>
 </p>
 
