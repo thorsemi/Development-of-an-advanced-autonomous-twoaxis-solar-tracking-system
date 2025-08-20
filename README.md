@@ -27,4 +27,5 @@ LS Control A/S
 LINEARMODUL A/S
 Raspberry Pi
 RS
+![Skærmbillede 2025-08-20 194859](https://github.com/user-attachments/assets/230a9b36-540c-43ec-a875-e37b6a219dcf)
 
