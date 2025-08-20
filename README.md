@@ -43,6 +43,14 @@ The user interface was developed in Node-RED to provide both monitoring and cont
   <img src="https://github.com/user-attachments/assets/ffadf97d-d8f7-41ee-bcbc-125c76575e87" width="650">
 </p>
 
+## SolarPy Algoritme
+The SolarPy algorithm is the core of the autonomous tracking system, ensuring precise alignment of the panel with the sun. Using real-time GPS data (latitude, longitude, and UTC) combined with compass orientation, the algorithm calculates the solar azimuth and altitude angles based on astronomical formulas. These values are continuously transmitted via MQTT to the motor controllers, where the stepper motor adjusts the azimuth axis and the actuator regulates the altitude axis. Built-in error handling ensures stable operation during temporary data loss, while calibration offsets align the mathematical model with the physical system. Together, this provides accurate, robust, and real-time solar tracking that maximizes energy yield and adapts to environmental conditions.
+
+<p align="center">
+<img width="650" height="650" alt="flowchart_english_professional" src="https://github.com/user-attachments/assets/00643a5b-e4c5-42fc-80ba-b44db830c5d6" />
+</p>
+
+
 ### Sponsors
 This project was made possible through the generous support of both national and international companies. Their contributions enabled the development of a full-scale prototype by providing essential components, funding, and expertise. I am sincerely grateful for their involvement and commitment, which played a crucial role in the successful completion of my bachelor thesis.
 
