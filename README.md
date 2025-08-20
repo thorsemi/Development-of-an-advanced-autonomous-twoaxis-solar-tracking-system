@@ -6,6 +6,7 @@ Autonomous dual-axis solar tracker using actuator &amp; stepper control, GPS/com
 ![High](https://github.com/user-attachments/assets/0838fa04-7584-4766-96a2-39260b3518dc)
 
 
+![Oversigt overview med trun on](https://github.com/user-attachments/assets/ffadf97d-d8f7-41ee-bcbc-125c76575e87)
 
 
 
