@@ -28,6 +28,7 @@ Userinterface
 
 ## CAD 
 All mechanical components of the solar tracker were designed and modeled in SolidWorks, including the frame, base, and moving platform. The CAD work ensured correct integration of actuators and stepper motors, while load-bearing structures were dimensioned according to wind and snow load requirements. SolidWorks simulations were used to evaluate stresses, deflections, and safety factors, providing a reliable digital twin before prototyping. In addition, the software enabled the creation of assembly drawings and a complete Bill of Materials (BOM), which guided both sourcing and manufacturing.
+
 ![High](https://github.com/user-attachments/assets/0838fa04-7584-4766-96a2-39260b3518dc)
 
 ## Userinterface
