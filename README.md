@@ -41,5 +41,6 @@ The user interface was developed in Node-RED to provide both monitoring and cont
 This project was made possible through the generous support of both national and international companies. Their contributions enabled the development of a full-scale prototype by providing essential components, funding, and expertise. I am sincerely grateful for their involvement and commitment, which played a crucial role in the successful completion of my bachelor thesis.
 
 Project Sponsors:
+
 ![Skærmbillede 2025-08-20 194859](https://github.com/user-attachments/assets/230a9b36-540c-43ec-a875-e37b6a219dcf)
 
