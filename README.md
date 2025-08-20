@@ -5,7 +5,8 @@ This project presents the design and implementation of a fully autonomous two-ax
 
 Communication between modules is handled through Node-RED with MQTT and serial protocols, while a dedicated user interface provides control, monitoring, and specialized operation modes. The mechanical structure was designed in SolidWorks, ensuring stability and reliability under wind and snow loads.
 
-![1739203162932](https://github.com/user-attachments/assets/18fc3c99-fcf5-427c-ac71-d5c0f5a99bb2)
+<img src="https://github.com/user-attachments/assets/18fc3c99-fcf5-427c-ac71-d5c0f5a99bb2" width="400">
+
 
 ## Files 
 MotorController__-_Stepper_motor
