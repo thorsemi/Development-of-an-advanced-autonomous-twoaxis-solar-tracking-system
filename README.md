@@ -36,7 +36,7 @@ All mechanical components of the solar tracker were designed and modeled in Soli
 ## Userinterface
 The user interface was developed in Node-RED to provide both monitoring and control of the solar tracker. It includes a control panel with multiple operating modes, such as WindSafe and SnowClear, as well as manual and autonomous tracking modes. Real-time data, including environmental conditions and system status, is automatically updated and visualized through dashboards. The interface also integrates mapping functionality to show location and orientation, while Node-RED manages communication between all modules via MQTT and serial protocols, ensuring seamless interaction across devices.
 
-<img src="https://github.com/user-attachments/assets/ffadf97d-d8f7-41ee-bcbc-125c76575e87" width="400">
+<img src="https://github.com/user-attachments/assets/ffadf97d-d8f7-41ee-bcbc-125c76575e87" width="600">
 
 
 ### Sponsors
@@ -44,6 +44,6 @@ This project was made possible through the generous support of both national and
 
 Project Sponsors:
 
-<img src="https://github.com/user-attachments/assets/230a9b36-540c-43ec-a875-e37b6a219dcf" width="400">
+<img src="https://github.com/user-attachments/assets/230a9b36-540c-43ec-a875-e37b6a219dcf" width="600">
 
 
