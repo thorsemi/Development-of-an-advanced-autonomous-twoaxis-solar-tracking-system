@@ -1,5 +1,9 @@
 # Development-of-an-advanced-autonomous-twoaxis-solar-tracking-system
-Autonomous dual-axis solar tracker using actuator &amp; stepper control, GPS/compass input, and SunPy-based sun positioning. Features Raspberry Pi–Arduino communication, MQTT/HTTP protocols, and Node-RED dashboard for monitoring &amp; control.
+Autonomous dual-axis solar tracker using actuator & stepper control, GPS/compass input, and SunPy-based sun positioning. Features Raspberry Pi–Arduino communication, MQTT/HTTP protocols, and a Node-RED dashboard for monitoring & control.
+
+This project presents the design and implementation of a fully autonomous two-axis solar tracking system, integrating mechanical, electrical, and software components into a cohesive prototype. The system combines precision motor control (stepper motor and actuator) with real-time navigation input from GPS and compass sensors, enabling accurate orientation towards the sun. The solar position is calculated using a custom SolarPy algorithm, which determines azimuth and altitude angles based on geographic coordinates and time.
+
+Communication between modules is handled through Node-RED with MQTT and serial protocols, while a dedicated user interface provides control, monitoring, and specialized operation modes. The mechanical structure was designed in SolidWorks, ensuring stability and reliability under wind and snow loads.
 
 ![1739203162932](https://github.com/user-attachments/assets/18fc3c99-fcf5-427c-ac71-d5c0f5a99bb2)
 
