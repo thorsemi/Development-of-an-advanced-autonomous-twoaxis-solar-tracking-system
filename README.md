@@ -52,7 +52,7 @@ The SolarPy algorithm is the core of the autonomous tracking system, ensuring pr
 
 
 ### Sponsors
-This project was made possible through the generous support of both national and international companies. Their contributions enabled the development of a full-scale prototype by providing essential components, funding, and expertise. I am sincerely grateful for their involvement and commitment, which played a crucial role in the successful completion of my bachelor thesis.
+This project was made possible through the generous support of both national and international companies. Their contributions enabled the development of a full-scale prototype by providing essential components, funding, and expertise. I am sincerely grateful for their involvement and commitment, which played a crucial role in the successful completion of my bachelor thesis. This project received the highest possible grade (12 on the Danish scale, equivalent to an A/A+ in the US/UK system). More importantly, it was acknowledged with excellent feedback from both professors, researchers, and industry representatives.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/230a9b36-540c-43ec-a875-e37b6a219dcf" width="650">
