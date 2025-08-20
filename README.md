@@ -1,21 +1,29 @@
 # Development-of-an-advanced-autonomous-twoaxis-solar-tracking-system
 Autonomous dual-axis solar tracker using actuator &amp; stepper control, GPS/compass input, and SunPy-based sun positioning. Features Raspberry Pi–Arduino communication, MQTT/HTTP protocols, and Node-RED dashboard for monitoring &amp; control.
 
+
+
 ## Files 
 MotorController__-_Stepper_motor
+- This module contains the control logic for the stepper motor. It includes initialization of pins, encoder feedback for precise angular positioning, and safety routines to ensure stable operation under varying loads.
 
 MotorController_-_Akuator
+- This module handles the control of the LA36 actuator. It converts desired tilt angles into voltage signals, reads feedback voltages, and applies calibration functions to ensure accurate linear positioning.
+
 
 Navigation_Module_1
+- This module integrates GPS and compass data to determine the current position and orientation of the solar tracker. It parses NMEA sentences, calibrates heading, and provides latitude/longitude values for further processing.
+
 
 SolarPy Algoritme
-
+- This Python module implements the solar position algorithm. Based on geographic coordinates and time, it calculates azimuth and altitude angles, which are then published via MQTT to the motor controllers for real-time tracking.
+  
 Userinterface
+- This module provides the Node-RED based user interface. It visualizes system status, environmental data, manual/automatic control options, and modes such as WindSafe and SnowClear for protective operation.
 
 ![1739203162932](https://github.com/user-attachments/assets/18fc3c99-fcf5-427c-ac71-d5c0f5a99bb2)
 
 ![High](https://github.com/user-attachments/assets/0838fa04-7584-4766-96a2-39260b3518dc)
-
 
 ![Oversigt overview med trun on](https://github.com/user-attachments/assets/ffadf97d-d8f7-41ee-bcbc-125c76575e87)
 
