@@ -1,0 +1,5588 @@
+[
+    {
+        "id": "bf4021bb48d9c1f7",
+        "type": "tab",
+        "label": "TAB1: Solartracking system",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f53f04432cc72497",
+        "type": "serial-port",
+        "name": "Raw Data - Navigation enhed [USB]",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "1000"
+    },
+    {
+        "id": "76e2381e75dd875d",
+        "type": "ui_tab",
+        "name": "Oversigt",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "959a0faa974c9c92",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#ccc500",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#4B7930",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#4B7930",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#6db046",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#333333",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#4b7930",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Solartracking system",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "false",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6add349f2f94bede",
+        "type": "ui_group",
+        "name": "Measurements",
+        "tab": "76e2381e75dd875d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5343936161118b4d",
+        "type": "ui_group",
+        "name": "Environmental Data",
+        "tab": "76e2381e75dd875d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dcf24ae60f23c790",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "76e2381e75dd875d",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "282225fbd5becb71",
+        "type": "ui_group",
+        "name": "System Status",
+        "tab": "76e2381e75dd875d",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "19de4543666f08ef",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "serial-port-config",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB2",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "\\n",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "mqtt-broker-config",
+        "type": "mqtt-broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "82ea02c4d916398f",
+        "type": "ui_group",
+        "name": "Status",
+        "tab": "828259b51e5edc23",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "828259b51e5edc23",
+        "type": "ui_tab",
+        "name": "MQTT Monitor",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2f4be9461f35d2b1",
+        "type": "ui_tab",
+        "name": "Control",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7fd750e5d3258fc3",
+        "type": "ui_group",
+        "name": "Movement ",
+        "tab": "2f4be9461f35d2b1",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f2ab606bee991303",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "2f4be9461f35d2b1",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "24ed7b8bcb3d8d60",
+        "type": "ui_group",
+        "name": "Wind Analysis",
+        "tab": "2f4be9461f35d2b1",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "arduino_serial_port",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": false,
+        "cts": false,
+        "dsr": false,
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "false",
+        "responsetimeout": ""
+    },
+    {
+        "id": "serial-config",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "serialport",
+        "type": "serial-port",
+        "name": "Motor Controller (AK)",
+        "serialport": "/dev/ttyUSB1",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "\\n",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "serial1",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB1",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "false",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "38a83843decc167b",
+        "type": "mqtt-broker",
+        "name": "MQTT Broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "177289467afda872",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB1",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": false,
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "your_serial_id",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "",
+        "bin": "false",
+        "out": "char",
+        "addchar": "\n",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "253c5ba915d1f487",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "828259b51e5edc23",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "group_id",
+        "type": "ui_group",
+        "name": "Aktuator Control",
+        "tab": "tab_id",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "tab_id",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "serial_id",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB1",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "\\n",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "4c2b2b1aebb165ad",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "false",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "5b203fc62e7f0472",
+        "type": "ui_group",
+        "name": "Stepper Control",
+        "tab": "6d9e48d3a42e0d69",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6d9e48d3a42e0d69",
+        "type": "ui_tab",
+        "name": "Control Panel",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f98bfe6ffb07a059",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB1",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "635b943349fd2e70",
+        "type": "ui_group",
+        "name": "Stepper Control",
+        "tab": "ce3455815cb940f2",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ce3455815cb940f2",
+        "type": "ui_tab",
+        "name": "Control Panel",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ea73fea65c2ea504",
+        "type": "ui_group",
+        "name": "Ground Control",
+        "tab": "5018bffa41964f40",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "5018bffa41964f40",
+        "type": "ui_tab",
+        "name": "Ground Panel",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "38ef918e7d5db4bb",
+        "type": "mqtt-broker",
+        "name": "MQTT Broker",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "tls": "",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": ""
+    },
+    {
+        "id": "serial_port",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB1",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "newline": "",
+        "bin": "false",
+        "out": "char",
+        "addchar": "\\n",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "e22fb3a785345bf9",
+        "type": "ui_group",
+        "name": "Vinkel Input",
+        "tab": "07ce3d40a64e8cdc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "07ce3d40a64e8cdc",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "86b4f320ddec98ed",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB1",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "false",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "def39c8f08ad19dd",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "57600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "c43e4767c8bcf0b6",
+        "type": "ui_group",
+        "name": "Vinkel Input",
+        "tab": "12ea0ac1895c5e26",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "12ea0ac1895c5e26",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c1bf772cb6503a9f",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "false",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "81a668b52715db1b",
+        "type": "serial-port",
+        "name": "MotorController11",
+        "serialport": "/dev/ttyUSB1",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "3792ca112ddf7185",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "dc12bc106257ca39",
+        "type": "serial-port",
+        "name": "a1",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "1x2y3z4w5v6u",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB1",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "\\n",
+        "responsetimeout": ""
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "MQTT Broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "fe4749bcac384fbf",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "/dev/ttyUSB2",
+        "serialbaud": "57600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Stepper Control",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Stepper Motor",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "stepper_group",
+        "type": "ui_group",
+        "name": "Stepper Control",
+        "tab": "stepper_tab",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "stepper_tab",
+        "type": "ui_tab",
+        "name": "Stepper Motor",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "arduino_serial",
+        "type": "serial-port",
+        "serialport": "/dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "\\n",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "3be7225c93fd519d",
+        "type": "ui_group",
+        "name": "Off-Set Tracking",
+        "tab": "2f4be9461f35d2b1",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f82236c70e7dc22b",
+        "type": "ui_worldmap",
+        "z": "bf4021bb48d9c1f7",
+        "group": "6add349f2f94bede",
+        "order": 6,
+        "width": "6",
+        "height": "7",
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "9",
+        "layer": "OSMC",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "hide",
+        "layers": "hide",
+        "panit": "true",
+        "panlock": "true",
+        "zoomlock": "true",
+        "hiderightclick": "true",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 290,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "d8f15d629d7abcbc",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "6add349f2f94bede",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Kompass",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 330,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "08cc4a3eb2c8f526",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Latitude",
+        "func": "// Antag, at beskeden indeholder GPS-data som tekst i formatet:\n// \"Latitude: 55.11.59394 N Longitude: 11.34 E\"\n\n// Adskil beskedindholdet ved linjeskift for at få individuelle linjer\nlet lines = msg.payload.split(\"\\n\");\n\n// Initialiser variabel til at gemme ny latitude værdi\nlet latitude = null;\n\n// Gennemgå linjerne og find den, der indeholder \"Latitude\"\nlines.forEach(line => {\n    if (line.includes(\"Latitude:\")) {\n        latitude = line.split(\"Latitude: \")[1].trim();\n    }\n});\n\n// Hvis der findes ny latitude værdi\nif (latitude) {\n    // Fjern \"N\" eller andre symboler og erstat komma med punktum\n    latitude = latitude.replace(\",\", \".\").replace(/[^0-9.]/g, \"\");\n\n    // Ret flere punktummer til ét ved at fjerne alt efter det første og tilføje resten som decimaler\n    let parts = latitude.split(\".\");\n    if (parts.length > 2) {\n        latitude = parts[0] + \".\" + parts.slice(1).join(\"\");\n    }\n\n    // Ekstraher de første to tal før det første punktum for validering\n    let numericPart = parseInt(parts[0], 10);\n\n    // Tjek om latitude er gyldig (starter med 55 eller højere)\n    if (numericPart >= 55) {\n        latitude = latitude + \" N\"; // Tilføj \"N\" til slutningen\n        global.set(\"lastLatitude\", latitude); // Gem ny værdi i global variabel\n        msg.payload = `Latitude: ${latitude}`;\n    } else {\n        // Hvis værdien ikke er gyldig, brug sidste kendte værdi\n        let lastLatitude = global.get(\"lastLatitude\");\n        if (lastLatitude) {\n            msg.payload = `Latitude: ${lastLatitude}`;\n        } else {\n            msg.payload = \"Latitude: Ingen gyldige data\";\n        }\n    }\n} else {\n    // Hvis ingen ny data, brug sidste kendte værdi\n    let lastLatitude = global.get(\"lastLatitude\");\n    if (lastLatitude) {\n        msg.payload = `Latitude: ${lastLatitude}`;\n    } else {\n        // Hvis der ikke er en tidligere værdi, kan vi sende en tom streng eller en standardværdi\n        msg.payload = \"Latitude: Ingen data\";\n    }\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 660,
+        "wires": [
+            [
+                "c056890adb1107e6",
+                "e91817e17bdb477d"
+            ]
+        ]
+    },
+    {
+        "id": "c056890adb1107e6",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "6add349f2f94bede",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Latitude ",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 300,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "d0e5ffebd3702174",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "6add349f2f94bede",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Longitude ",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 310,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "9f64b3f02d778a42",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Mapping",
+        "func": "// Hent latitude og longitude fra globale variabler\nlet latitude = global.get(\"lastLatitude\") || \"55.6761\"; // Standard værdi hvis ingen data\nlet longitude = global.get(\"lastLongitude\") || \"12.5683\"; // Standard værdi hvis ingen data\n\n// Erstat komma med punktum, hvis nødvendigt, og konverter til decimaltal\nlatitude = parseFloat(latitude.replace(\",\", \".\")).toFixed(9);\nlongitude = parseFloat(longitude.replace(\",\", \".\")).toFixed(9);\n\n// Formater data til worldmap-noden med zoomniveau\nmsg.payload = {\n    name: \"GPS Position\",         // Valgfri navn for markøren på kortet\n    lat: parseFloat(latitude),    // Latitude som decimaltal\n    lon: parseFloat(longitude),   // Longitude som decimaltal\n    zoom: 5,                     // Indstil zoomniveau (ændr til ønsket niveau)\n    layer: \"track\",               // Valgfri lag for markøren\n    icon: \"fa-map-marker\",        // Ikon for markøren\n    iconColor: \"blue\"             // Farve for markøren\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 820,
+        "wires": [
+            [
+                "f82236c70e7dc22b"
+            ]
+        ]
+    },
+    {
+        "id": "e0ad5d02fd6db7c9",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Navigation Module",
+        "info": "> ****____",
+        "x": 110,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "a8c305525f4f4c45",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Longitude",
+        "func": "// Vi antager, at beskeden indeholder GPS-data som tekst i formatet:\n// \"Latitude: 55,11 N Longitude: 11,34 E\"\n\n// Adskil beskedindholdet ved linjeskift for at få individuelle linjer\nlet lines = msg.payload.split(\"\\n\");\n\n// Initialiser variabel til at gemme ny longitude værdi\nlet longitude = null;\n\n// Gennemgå linjerne og find den, der indeholder \"Longitude\"\nlines.forEach(line => {\n    if (line.includes(\"Longitude:\")) {\n        longitude = line.split(\"Longitude: \")[1].trim();\n    }\n});\n\n// Hvis der findes ny longitude værdi\nif (longitude) {\n    // Fjern \"E\" eller andre symboler og erstat komma med punktum\n    longitude = longitude.replace(\",\", \".\").replace(/[^0-9.]/g, \"\");\n\n    // Ret flere punktummer til ét ved at fjerne alt efter det første og tilføje resten som decimaler\n    let parts = longitude.split(\".\");\n    if (parts.length > 2) {\n        longitude = parts[0] + \".\" + parts.slice(1).join(\"\");\n    }\n\n    // Konverter longitude til en numerisk værdi for sammenligning\n    let numericLongitude = parseFloat(longitude);\n\n    // Tjek om longitude ligger mellem 11 og 12\n    if (numericLongitude >= 11 && numericLongitude <= 12) {\n        // Tilføj \" E\" til slutningen\n        longitude = longitude + \" E\";\n\n        // Gem ny værdi i global variabel\n        global.set(\"lastLongitude\", longitude);\n        msg.payload = `Longitude: ${longitude}`;\n    } else {\n        // Hvis longitude ikke er mellem 11 og 12, brug sidste kendte værdi\n        let lastLongitude = global.get(\"lastLongitude\");\n        if (lastLongitude) {\n            msg.payload = `Longitude: ${lastLongitude}`;\n        } else {\n            msg.payload = \"Longitude: Ingen gyldige data\";\n        }\n    }\n} else {\n    // Hvis ingen ny data, brug sidste kendte værdi\n    let lastLongitude = global.get(\"lastLongitude\");\n    if (lastLongitude) {\n        msg.payload = `Longitude: ${lastLongitude}`;\n    } else {\n        // Hvis der ikke er en tidligere værdi, kan vi sende en tom streng eller en standardværdi\n        msg.payload = \"Longitude: Ingen data\";\n    }\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "d0e5ffebd3702174",
+                "e91817e17bdb477d"
+            ]
+        ]
+    },
+    {
+        "id": "53bced965ed9b8e5",
+        "type": "exec",
+        "z": "bf4021bb48d9c1f7",
+        "command": "vcgencmd measure_temp",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 530,
+        "y": 3120,
+        "wires": [
+            [
+                "7e0356f66062be9e"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ebafba05c47caf4c",
+        "type": "inject",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 3120,
+        "wires": [
+            [
+                "53bced965ed9b8e5"
+            ]
+        ]
+    },
+    {
+        "id": "7e0356f66062be9e",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "function 6",
+        "func": "\nlet tempString = msg.payload;\nlet tempValue = parseFloat(tempString.split('=')[1]);\nmsg.payload = tempValue;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 3040,
+        "wires": [
+            [
+                "8b86af87545f2117",
+                "31ca6f45d0ef74d0"
+            ]
+        ]
+    },
+    {
+        "id": "8b86af87545f2117",
+        "type": "ui_gauge",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "group": "282225fbd5becb71",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Contol System Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "90",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "diff": false,
+        "className": "",
+        "x": 940,
+        "y": 3020,
+        "wires": []
+    },
+    {
+        "id": "35cb52ddb4ab6eec",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Weather API",
+        "info": "",
+        "x": 90,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "6aca0f1f1a09ac29",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "System Status",
+        "info": "",
+        "x": 90,
+        "y": 3040,
+        "wires": []
+    },
+    {
+        "id": "e4386e1f256a7c9a",
+        "type": "trigger",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 320,
+        "y": 3360,
+        "wires": [
+            [
+                "1f433ace7d93bb09",
+                "2760268bb7acc5c3"
+            ]
+        ]
+    },
+    {
+        "id": "1f433ace7d93bb09",
+        "type": "ui_led",
+        "z": "bf4021bb48d9c1f7",
+        "order": 1,
+        "group": "282225fbd5becb71",
+        "width": 0,
+        "height": 0,
+        "label": "Navigation Module",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 470,
+        "y": 3360,
+        "wires": []
+    },
+    {
+        "id": "ed2169532833c00d",
+        "type": "serial in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "serial": "f53f04432cc72497",
+        "x": 105,
+        "y": 200,
+        "wires": [
+            [
+                "b0ee20e4c0fd897e",
+                "baac40780ffa3c13",
+                "c6a49da02de47faf",
+                "b52eb2d6b054bf49",
+                "2daf36f8d56f6a99",
+                "4d750328b2ee23fd"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "0b9dbadef2cf6955",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Extract Weather",
+        "func": "// Udtræk kun værdien af \"weather\"\nmsg.payload = msg.payload.weather || \"Ingen data om vejret\"; // Standardværdi, hvis \"weather\" ikke findes\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 880,
+        "wires": [
+            [
+                "474e16dc068d2eb9"
+            ]
+        ]
+    },
+    {
+        "id": "49ae964035b9b4ac",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Extract Sunrise",
+        "func": "// Udtræk \"sunrise\"-værdien\nif (msg.payload.sunrise) {\n    // Del tiden op i timer og minutter\n    let sunriseTime = msg.payload.sunrise.split(\":\");\n    let hours = sunriseTime[0];\n    let minutes = sunriseTime[1];\n\n    // Returner kun tidspunktet som \"HH:MM\"\n    msg.payload = `${hours}:${minutes}`;\n} else {\n    // Standardværdi, hvis \"sunrise\" ikke findes\n    msg.payload = \"Ingen data om solopgang\";\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 920,
+        "wires": [
+            [
+                "b9acfd4cb38dc928"
+            ]
+        ]
+    },
+    {
+        "id": "acde590fcfc8ce44",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Extract Sunset",
+        "func": "// Udtræk \"sunset\"-værdien\nif (msg.payload.sunset) {\n    // Del tiden op i timer og minutter\n    let sunsetTime = msg.payload.sunset.split(\":\");\n    let hours = sunsetTime[0];\n    let minutes = sunsetTime[1];\n\n    // Returner kun tidspunktet som \"HH:MM\"\n    msg.payload = `${hours}:${minutes}`;\n} else {\n    // Standardværdi, hvis \"sunset\" ikke findes\n    msg.payload = \"Ingen data om solnedgang\";\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 960,
+        "wires": [
+            [
+                "dafca9b5ad3793ae"
+            ]
+        ]
+    },
+    {
+        "id": "dafca9b5ad3793ae",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "5343936161118b4d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Sunset ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1380,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "b9acfd4cb38dc928",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "5343936161118b4d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Sunrise",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1380,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "474e16dc068d2eb9",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "5343936161118b4d",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Weather",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1380,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "3835ea2b68692bed",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Extract Windspeed",
+        "func": "// Ekstraher og afrund vindhastighed\nconst wind_speed = parseFloat(msg.payload.wind_speed).toFixed(2); // Afrund til to decimaler\n\n// Formatér output\nmsg.payload = `${wind_speed} m/s`; // Kun vindhastighed med enhed som tekst\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 840,
+        "wires": [
+            [
+                "19d2f41315b0b1dc",
+                "ea7ceabf22c945bd",
+                "e7385efe79a8de9a"
+            ]
+        ]
+    },
+    {
+        "id": "e322fe3778d6bd1d",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Parse Serial Input",
+        "func": "// Tjek om msg.payload er defineret\nif (!msg.payload) {\n    node.error(\"msg.payload is undefined or empty.\");\n    return null;\n}\n\n// Trim input for at fjerne unødvendige mellemrum\nlet input = msg.payload.trim();\n\nif (input.startsWith(\"Latitude:\")) {\n    // Gem Latitude i flow-variablen\n    flow.set(\"latitude\", input.replace(\"Latitude:\", \"\").trim());\n    node.warn(`Latitude stored: ${flow.get(\"latitude\")}`);\n    return null;\n} else if (input.startsWith(\"Longitude:\")) {\n    // Gem Longitude i flow-variablen\n    flow.set(\"longitude\", input.replace(\"Longitude:\", \"\").trim());\n    \n    return null;\n}\n\n// Hent Latitude og Longitude fra flow-variabler\nconst latitude = flow.get(\"latitude\");\nconst longitude = flow.get(\"longitude\");\n\n// Tjek om begge værdier er tilgængelige\nif (latitude && longitude) {\n    msg.latitude = latitude;\n    msg.longitude = longitude;\n    \n    return msg;\n}\n\n// Hvis værdierne ikke er klar, vent på næste besked\nreturn null;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 960,
+        "wires": [
+            [
+                "9f3a8cae10a88fa0"
+            ]
+        ]
+    },
+    {
+        "id": "9f3a8cae10a88fa0",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Build API URL",
+        "func": "const apiKey = \"f8973b99d1ba67e3a3fede6b6fd240a1\"; // OpenWeatherMap API-nøgle\n\n// Tjek at latitude og longitude er gyldige\nif (!msg.latitude || !msg.longitude) {\n    return null;\n}\n\n// Byg API URL\nmsg.url = `https://api.openweathermap.org/data/2.5/weather?lat=${msg.latitude}&lon=${msg.longitude}&appid=${apiKey}&units=metric`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 960,
+        "wires": [
+            [
+                "15487269dc60c3b4"
+            ]
+        ]
+    },
+    {
+        "id": "15487269dc60c3b4",
+        "type": "http request",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Call OpenWeatherMap",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 570,
+        "y": 960,
+        "wires": [
+            [
+                "format-data"
+            ]
+        ]
+    },
+    {
+        "id": "format-data",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Format Data",
+        "func": "// Ekstraher nødvendige data fra API-svaret\nconst weather = msg.payload.weather[0].description; // Vejrtype\nconst temp = msg.payload.main.temp; // Temperatur\nconst feels_like = msg.payload.main.feels_like; // Føles som temperatur\nconst wind_speed = msg.payload.wind.speed; // Vindhastighed\nconst city = msg.payload.name; // Byens navn\nconst country = msg.payload.sys.country; // Landets kode (f.eks. DK for Danmark)\nconst sunrise = new Date(msg.payload.sys.sunrise * 1000).toLocaleTimeString(); // Solopgang\nconst sunset = new Date(msg.payload.sys.sunset * 1000).toLocaleTimeString(); // Solnedgang\n\n// Kontroller, om der er sne\nconst snow = msg.payload.snow && msg.payload.snow[\"1h\"] \n    ? `${msg.payload.snow[\"1h\"]} mm` \n    : \"No Snow\";\n\n// Formatér output\nmsg.payload = {\n    city: city,\n    country: country, // Land\n    temperature: `${temp} °C`,\n    feels_like: `${feels_like} °C`,\n    weather: weather,\n    wind_speed: `${wind_speed} m/s`,\n    sunrise: sunrise, // Solopgang\n    sunset: sunset,   // Solnedgang\n    snow: snow        // Sneinformation\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 960,
+        "wires": [
+            [
+                "check-country"
+            ]
+        ]
+    },
+    {
+        "id": "check-country",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Check Country",
+        "func": "// Tjek om landekoden er DK\nif (msg.payload.country === \"DK\") {\n    return msg; // Fortsæt, hvis landet er Danmark\n} else {\n    node.warn(`Landet er '${msg.payload.country}', ikke Danmark. Data ignoreret.`);\n    return null; // Stop flowet, hvis landet ikke er Danmark\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 960,
+        "wires": [
+            [
+                "0b9dbadef2cf6955",
+                "49ae964035b9b4ac",
+                "acde590fcfc8ce44",
+                "3835ea2b68692bed",
+                "edd081ebfb46caf1",
+                "e19a26cd8096a646",
+                "3173dc6be8cf414a"
+            ]
+        ]
+    },
+    {
+        "id": "19d2f41315b0b1dc",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "5343936161118b4d",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Windspeed",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1390,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "edd081ebfb46caf1",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Extract City",
+        "func": "// Ekstraher by\nmsg.payload = msg.payload.city; // Kun bynavn som tekst\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1170,
+        "y": 1000,
+        "wires": [
+            [
+                "dd43f4f9c88b0525"
+            ]
+        ]
+    },
+    {
+        "id": "e19a26cd8096a646",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Country",
+        "func": "// Ekstraher land\nmsg.payload = msg.payload.country; // Kun landekode som tekst\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 1040,
+        "wires": [
+            [
+                "6c367c14551fb7fa"
+            ]
+        ]
+    },
+    {
+        "id": "dd43f4f9c88b0525",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "5343936161118b4d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "City",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1370,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "6c367c14551fb7fa",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "5343936161118b4d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Country",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1380,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "44b4a02e80c311d3",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "dcf24ae60f23c790",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Sun direction",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 670,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "bd9e3e937cd699b6",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "5343936161118b4d",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Snow",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1370,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "3173dc6be8cf414a",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Snow",
+        "func": "// Udtræk kun værdien af \"snow\"\nmsg.payload = msg.payload.snow || \"No Data about snow\"; // Standardværdi, hvis \"snow\" ikke findes\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 1080,
+        "wires": [
+            [
+                "bd9e3e937cd699b6",
+                "14296dadf7f03ed2"
+            ]
+        ]
+    },
+    {
+        "id": "33e210c79062236d",
+        "type": "mqtt out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "MQTT Output",
+        "topic": "solartracker/gps",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "mqtt-broker-config",
+        "x": 510,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "e91817e17bdb477d",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "MQTT Format",
+        "func": "// Replace periods with commas and remove N/E\nmsg.payload = msg.payload\n    .split(':')[1] // Get the value after \":\"\n    .replace('.', ',') // Replace the first period with a comma\n    .replace(/[NE]/g, '') // Remove 'N' or 'E'\n    .trim(); // Remove any extra spaces\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 680,
+        "wires": [
+            [
+                "33e210c79062236d"
+            ]
+        ]
+    },
+    {
+        "id": "8ab636a50e7efc29",
+        "type": "mqtt in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "MQTT Input",
+        "topic": "solartracker/output",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "mqtt-broker-config",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 90,
+        "y": 1400,
+        "wires": [
+            [
+                "49c55cabdff757ff",
+                "8102b96edb7c437e",
+                "a46ba58a0f504ff6"
+            ]
+        ]
+    },
+    {
+        "id": "49c55cabdff757ff",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Altitude",
+        "func": "// Parse payload som et JavaScript-objekt\nlet data = msg.payload;\n\n// Hvis payload er en streng, konverter den til et objekt\nif (typeof data === \"string\") {\n    try {\n        data = eval(\"(\" + data + \")\"); // Konverter Python-lignende dict til JS-objekt\n    } catch (e) {\n        node.error(\"Fejl ved parsing af payload: \" + e);\n        return null;\n    }\n}\n\n// Hent Altitude-værdien\nmsg.payload = data.Altitude;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 1460,
+        "wires": [
+            [
+                "dae4825c5e3566ae"
+            ]
+        ]
+    },
+    {
+        "id": "dae4825c5e3566ae",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "6add349f2f94bede",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Altitude",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 520,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "8102b96edb7c437e",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Azimuth",
+        "func": "// Parse payload som et JavaScript-objekt\nlet data = msg.payload;\n\n// Hvis payload er en streng, konverter den til et objekt\nif (typeof data === \"string\") {\n    try {\n        data = eval(\"(\" + data + \")\"); // Konverter Python-lignende dict til JS-objekt\n    } catch (e) {\n        node.error(\"Fejl ved parsing af payload: \" + e);\n        return null;\n    }\n}\n\n// Hent Azimuth-værdien\nmsg.payload = data.Azimuth;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 1340,
+        "wires": [
+            [
+                "a2a138fc241a81f5",
+                "f963b2dcbac8a62c",
+                "33ffe7d2b09a4799",
+                "23a1d8c2b363c16d"
+            ]
+        ]
+    },
+    {
+        "id": "a2a138fc241a81f5",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "6add349f2f94bede",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Azimuth",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 520,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "aabd76db84869a86",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "SolarPy",
+        "info": "",
+        "x": 70,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "17afe6d997dd213e",
+        "type": "ui_led",
+        "z": "bf4021bb48d9c1f7",
+        "order": 2,
+        "group": "282225fbd5becb71",
+        "width": 0,
+        "height": 0,
+        "label": "SolarPy",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 470,
+        "y": 3400,
+        "wires": []
+    },
+    {
+        "id": "e5041ed0c1eefde6",
+        "type": "trigger",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "5",
+        "extend": true,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 320,
+        "y": 3400,
+        "wires": [
+            [
+                "17afe6d997dd213e",
+                "fed1ec9ee207e08f"
+            ]
+        ]
+    },
+    {
+        "id": "ea7ceabf22c945bd",
+        "type": "ui_chart",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "group": "24ed7b8bcb3d8d60",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Wind speed",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1390,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f963b2dcbac8a62c",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Rewirte",
+        "func": "// Hent inputtet (f.eks. 252.14)\nlet number = msg.payload;\n\n// Tilføj grader-tegnet\nmsg.payload = number + \"°\";\n\n// Returner den ændrede besked\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1360,
+        "wires": [
+            [
+                "44b4a02e80c311d3"
+            ]
+        ]
+    },
+    {
+        "id": "cb936264e1075641",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Autonom Control",
+        "info": "",
+        "x": 100,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "b75505bedffad361",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manual Control - Ground Mode",
+        "info": "",
+        "x": 150,
+        "y": 2660,
+        "wires": []
+    },
+    {
+        "id": "8bc9f3f2c019e215",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manual Control - Actuator",
+        "info": "",
+        "x": 130,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "autonom_control",
+        "type": "ui_switch",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Autonom Control",
+        "label": "Autonom Control",
+        "tooltip": "",
+        "group": "dcf24ae60f23c790",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 110,
+        "y": 1600,
+        "wires": [
+            [
+                "d1db5c5f15347132",
+                "2d993f081978cbe8",
+                "00e8ab505ec121d8"
+            ]
+        ]
+    },
+    {
+        "id": "611c9056446666cc",
+        "type": "ui_switch",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "label": "Wind Safe-Mode",
+        "tooltip": "",
+        "group": "dcf24ae60f23c790",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 170,
+        "y": 2060,
+        "wires": [
+            [
+                "0a056d60b2adef66"
+            ]
+        ]
+    },
+    {
+        "id": "slider_node",
+        "type": "ui_switch",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manuel Control",
+        "label": "Manual Control",
+        "tooltip": "",
+        "group": "dcf24ae60f23c790",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "manual_control",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 100,
+        "y": 2260,
+        "wires": [
+            [
+                "b263ce4065afc13d",
+                "d0d46f8c19f6cce5",
+                "9e9f48e887fe7cd0",
+                "83217fd3108bd07b"
+            ]
+        ]
+    },
+    {
+        "id": "766d9d690fd4d8c4",
+        "type": "ui_led",
+        "z": "bf4021bb48d9c1f7",
+        "order": 5,
+        "group": "282225fbd5becb71",
+        "width": 0,
+        "height": 0,
+        "label": "Smart Inveter system",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 470,
+        "y": 3480,
+        "wires": []
+    },
+    {
+        "id": "61683359032521eb",
+        "type": "ui_chart",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "group": "3be7225c93fd519d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Sun Vs Compass",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 390,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f47de7cf3fe3af2",
+        "type": "ui_switch",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Ground Mode",
+        "label": "Ground",
+        "tooltip": "Aktiver for at deaktivere signalet til aktuatoren",
+        "group": "dcf24ae60f23c790",
+        "order": 5,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "ground_mode",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 160,
+        "y": 2700,
+        "wires": [
+            [
+                "157ae527b9097a22",
+                "38be14cdc9ed8adc"
+            ]
+        ]
+    },
+    {
+        "id": "157ae527b9097a22",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Check Ground Mode",
+        "func": "if (msg.payload === \"ON\") {\n    // Hvis Ground Mode er aktiveret\n    node.status({fill: \"red\", shape: \"dot\", text: \"Ground Mode Aktiv\"});\n    return { payload: \"GROUND\" }; // Send signal for at deaktivere\n} else {\n    // Hvis Ground Mode er deaktiveret\n    node.status({fill: \"green\", shape: \"dot\", text: \"Ground Mode Deaktiveret\"});\n    return { payload: \"RESUME\" }; // Tillad signal\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 2680,
+        "wires": [
+            [
+                "f0356020d722ebf7"
+            ]
+        ]
+    },
+    {
+        "id": "b92641000c2b9d7d",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "7fd750e5d3258fc3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Enter the angle of the actuator",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1850,
+        "y": 7080,
+        "wires": []
+    },
+    {
+        "id": "66fd563c25479514",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "7fd750e5d3258fc3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Actuator Control",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1840,
+        "y": 7040,
+        "wires": []
+    },
+    {
+        "id": "38be14cdc9ed8adc",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Check Ground Mode",
+        "func": "if (msg.payload === \"ON\") {\n    return { payload: \"S\" }; // Stop signal til stepper motor\n} else {\n    return { payload: \"RESUME\" }; // Genoptag signal (kan tilpasses)\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 2720,
+        "wires": [
+            [
+                "fdc57454cd328480"
+            ]
+        ]
+    },
+    {
+        "id": "e7385efe79a8de9a",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Wind Speed",
+        "mode": "link",
+        "links": [
+            "baf5ef2501aba2c9"
+        ],
+        "x": 1505,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "baf5ef2501aba2c9",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 1",
+        "links": [
+            "e7385efe79a8de9a"
+        ],
+        "x": 515,
+        "y": 2100,
+        "wires": [
+            [
+                "dd30cb27bfb2a681"
+            ]
+        ]
+    },
+    {
+        "id": "f65ea8c215ae2be2",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "dcf24ae60f23c790",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Direction",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 330,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "0acb8118a8d05065",
+        "type": "ui_gauge",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "group": "dcf24ae60f23c790",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "compass",
+        "title": "",
+        "label": "",
+        "format": "{{msg.payload.value}}°",
+        "min": 0,
+        "max": "360",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 490,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "283039958a81b972",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Compass",
+        "func": "// Modtag data som tekst fra Serial\nlet input = msg.payload;\n\n// Tjek om teksten starter med \"Kompas:\"\nif (input.startsWith(\"Kompas:\")) {\n    // Find vinkel\n    let startIndex = input.indexOf(\":\") + 2; // Start lige efter \"Kompas: \"\n    let endIndex = input.indexOf(\"°\");      // Slut ved \"°\"\n    let angle = parseFloat(input.substring(startIndex, endIndex).trim());\n\n    // Juster vinklen ved at trække 52 fra\n    angle = (angle - 63) % 360;\n\n    // Sørg for, at vinklen altid er positiv\n    if (angle < 0) {\n        angle += 360;\n    }\n\n    // Begræns vinklen til højst 2 decimaler\n    angle = parseFloat(angle.toFixed(2));\n\n    // Find retning\n    let directionIndex = input.indexOf(\"°\") + 2; // Start lige efter \"° \"\n    let direction = input.substring(directionIndex).trim();\n\n    // Formater retningen med stort begyndelsesbogstav\n    direction = direction.charAt(0).toUpperCase() + direction.slice(1).toLowerCase();\n\n    // Returner data som tekststreng\n    msg.payload = \"Angle: \" + angle + \"° \" + direction;\n    return msg;\n} else {\n    // Hvis input ikke starter med \"Kompas:\", ignorer\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 520,
+        "wires": [
+            [
+                "d8f15d629d7abcbc",
+                "30f2d7a8aef610bc"
+            ]
+        ]
+    },
+    {
+        "id": "30f2d7a8aef610bc",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Angle",
+        "func": "// Input example: \"Angle: 145.68\"\nlet input = msg.payload;\n\n// Ekstraher vinklen fra inputstrengen\nlet angle = parseFloat(input.replace(\"Angle:\", \"\").trim());\n\n// Formatér data til kompasset\nmsg.payload = {\n    value: angle, // Vinklen i grader\n    label: \"Kompasretning\" // Valgfrit label\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 500,
+        "wires": [
+            [
+                "0acb8118a8d05065",
+                "46af7152fb6e3c52"
+            ]
+        ]
+    },
+    {
+        "id": "413e304320efbacd",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Offset function",
+        "func": "// Kontrollér, om msg.payload eksisterer\nif (!msg.payload) {\n    return null;\n}\n\n// Hvis input er \"Kompas:\"\nif (typeof msg.payload === \"string\" && msg.payload.includes(\"Kompas:\")) {\n    // Fjern \"Kompas:\" og \"°\", og konverter til tal\n    let compassValue = parseFloat(msg.payload.replace(\"Kompas:\", \"\").replace(\"°\", \"\").trim());\n\n    // Hent den gemte numericValue\n    let numericValue = flow.get(\"numericValue\");\n\n    if (numericValue !== undefined) {\n        // Beregn forskellen\n        let difference = numericValue - compassValue;\n\n        // Formatér forskellen til to decimaler og tilføj grad-tegn\n        msg.payload = (difference.toFixed(2)) + \"°\";\n        return msg;\n    } else {\n        return null;\n    }\n}\n\n// Hvis input er en numerisk værdi (numericValue)\nif (typeof msg.payload === \"number\") {\n    // Gem numericValue i flow-variabel\n    flow.set(\"numericValue\", msg.payload);\n    node.status({ fill: \"green\", shape: \"dot\", text: \"NumericValue sat: \" + msg.payload });\n    return null;\n}\n\n// Hvis input ikke matcher nogen kendte typer\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 1060,
+        "wires": [
+            [
+                "99ae05a3d1710864",
+                "fcddfad19c6bb1eb"
+            ]
+        ]
+    },
+    {
+        "id": "99ae05a3d1710864",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "dcf24ae60f23c790",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Offset",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 370,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "1fee6e0f46ee6958",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Heading",
+        "func": "// Få input fra payload\nlet input = msg.payload;\n\n// Fjern \"Kompas: \" og \"°\"\nlet cleanedInput = input.replace(\"Kompas: \", \"\").replace(\"°\", \"\");\n\n// Konverter til et tal\nlet angle = parseFloat(cleanedInput);\n\n// Juster vinklen ved at trække 63 fra og sikre, at den forbliver mellem 0 og 360\nangle = (angle - 63 + 360) % 360;\n\n// Bestem kompasretning\nlet direction = \"\";\nif (angle >= 337.5 || angle < 22.5) {\n    direction = \"North\";\n} else if (angle >= 22.5 && angle < 67.5) {\n    direction = \"Northeast\";\n} else if (angle >= 67.5 && angle < 112.5) {\n    direction = \"East\";\n} else if (angle >= 112.5 && angle < 157.5) {\n    direction = \"Southeast\";\n} else if (angle >= 157.5 && angle < 202.5) {\n    direction = \"South\";\n} else if (angle >= 202.5 && angle < 247.5) {\n    direction = \"Southwest\";\n} else if (angle >= 247.5 && angle < 292.5) {\n    direction = \"West\";\n} else if (angle >= 292.5 && angle < 337.5) {\n    direction = \"Northwest\";\n}\n\n// Send retning som output\nmsg.payload = direction;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 440,
+        "wires": [
+            [
+                "f65ea8c215ae2be2"
+            ]
+        ]
+    },
+    {
+        "id": "1979b8b2659da63a",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Offset Analysis",
+        "info": "",
+        "x": 100,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "26b734a31f3ff625",
+        "type": "ui_text_input",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Enter Angle (degrees)",
+        "label": "Enter Angle (degrees)",
+        "tooltip": "",
+        "group": "7fd750e5d3258fc3",
+        "order": 3,
+        "width": "6",
+        "height": "1",
+        "passthru": true,
+        "mode": "number",
+        "delay": "0",
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 180,
+        "y": 2560,
+        "wires": [
+            [
+                "b30638c4c6258ecd"
+            ]
+        ]
+    },
+    {
+        "id": "b30638c4c6258ecd",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Beregn Længde",
+        "func": "// Konstanter\nconst minAngle = 0;          // Minimum vinkel (grader)\nconst maxAngle = 77.16;      // Maksimum vinkel (grader)\nconst minLength = 92;        // Minimum længde (mm)\nconst maxLength = 279;       // Maksimum længde (mm)\n\n// Input fra bruger\nlet inputAngle = msg.payload;\n\n// Tjek om input er inden for det tilladte interval\nif (inputAngle < minAngle || inputAngle > maxAngle) {\n    return { payload: `Fejl: Vinkel skal være mellem ${minAngle}° og ${maxAngle}°` };\n}\n\n// Konverter vinkel til længde\nlet length = minLength + ((inputAngle - minAngle) / (maxAngle - minAngle)) * (maxLength - minLength);\n\n// Sæt længden som payload\nmsg.payload = length;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 2560,
+        "wires": [
+            [
+                "e34d68239ee6e238"
+            ]
+        ]
+    },
+    {
+        "id": "e34d68239ee6e238",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Tjek Interval",
+        "func": "// Konstanter\nconst minLength = 92; // Minimal længde (mm)\nconst maxLength = 279; // Maksimal længde (mm)\n\n// Tjek om længden er gyldig\nif (msg.payload < minLength || msg.payload > maxLength) {\n    return { payload: `Fejl: Længde skal være mellem ${minLength} mm og ${maxLength} mm` };\n}\n\n// Returner gyldig længde\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 2560,
+        "wires": [
+            [
+                "c48e84df40d2e8e7"
+            ]
+        ]
+    },
+    {
+        "id": "19d6cea68fd12293",
+        "type": "serial out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Akuator",
+        "serial": "dc12bc106257ca39",
+        "x": 1495,
+        "y": 200,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "f005e5e1c9aaf044",
+        "type": "serial out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Stepper Motor",
+        "serial": "f98bfe6ffb07a059",
+        "x": 1025,
+        "y": 200,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "d4f756b4cb9b1cc2",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 2",
+        "links": [
+            "c48e84df40d2e8e7"
+        ],
+        "x": 1385,
+        "y": 160,
+        "wires": [
+            [
+                "19d6cea68fd12293"
+            ]
+        ]
+    },
+    {
+        "id": "c48e84df40d2e8e7",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "d4f756b4cb9b1cc2"
+        ],
+        "x": 655,
+        "y": 2580,
+        "wires": []
+    },
+    {
+        "id": "f15184404b41cc7c",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 3",
+        "links": [
+            "32c1109c430c443c"
+        ],
+        "x": 905,
+        "y": 200,
+        "wires": [
+            [
+                "f005e5e1c9aaf044"
+            ]
+        ]
+    },
+    {
+        "id": "32c1109c430c443c",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "f15184404b41cc7c"
+        ],
+        "x": 345,
+        "y": 2440,
+        "wires": []
+    },
+    {
+        "id": "dbffc693d05e11fa",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 4",
+        "links": [
+            "fdc57454cd328480",
+            "c9e24608b57aef38"
+        ],
+        "x": 905,
+        "y": 160,
+        "wires": [
+            [
+                "f005e5e1c9aaf044"
+            ]
+        ]
+    },
+    {
+        "id": "fdc57454cd328480",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "dbffc693d05e11fa"
+        ],
+        "x": 545,
+        "y": 2720,
+        "wires": []
+    },
+    {
+        "id": "f0356020d722ebf7",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 4",
+        "mode": "link",
+        "links": [
+            "64459061a4151324"
+        ],
+        "x": 545,
+        "y": 2680,
+        "wires": []
+    },
+    {
+        "id": "64459061a4151324",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 5",
+        "links": [
+            "f0356020d722ebf7"
+        ],
+        "x": 1385,
+        "y": 120,
+        "wires": [
+            [
+                "19d6cea68fd12293"
+            ]
+        ]
+    },
+    {
+        "id": "d02b31d9e6ff036f",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 6",
+        "links": [
+            "d5b46a1f981d2798",
+            "8c8d55e6dab64b8c"
+        ],
+        "x": 1385,
+        "y": 200,
+        "wires": [
+            [
+                "19d6cea68fd12293"
+            ]
+        ]
+    },
+    {
+        "id": "85598fbfb1da2e6b",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 7",
+        "links": [
+            "7d4bfe6dfb99e9d9"
+        ],
+        "x": 905,
+        "y": 120,
+        "wires": [
+            [
+                "f005e5e1c9aaf044"
+            ]
+        ]
+    },
+    {
+        "id": "0a056d60b2adef66",
+        "type": "switch",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Wind Safe-Mode Activation ",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "3.2",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 2060,
+        "wires": [
+            [
+                "dd30cb27bfb2a681"
+            ]
+        ]
+    },
+    {
+        "id": "dd30cb27bfb2a681",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Tjek Vindhastighed",
+        "func": "// Kontroller vindhastighed (eksempel)\nconst vindhastighed = msg.payload; // Antag at vindhastighed er i msg.payload\nconst grænse = 14; // aktiver ved vindhastighed over 14 m/s\n\nif (vindhastighed > grænse) {\n    msg.payload = 1; // Send 1, når vindhastighed er høj\n    return msg;\n} else {\n    msg.payload = 0; // Send 0, hvis under grænsen\n    return msg;\n}\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 2060,
+        "wires": [
+            [
+                "22048d7125ac2aa2",
+                "1195b6bb841bc073",
+                "cd8fa9b4c1fdad71"
+            ],
+            [
+                "22048d7125ac2aa2"
+            ]
+        ]
+    },
+    {
+        "id": "336b8244833fc4e9",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 5",
+        "mode": "link",
+        "links": [
+            "ec153d3129e5f823"
+        ],
+        "x": 1065,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "ec153d3129e5f823",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 8",
+        "links": [
+            "336b8244833fc4e9"
+        ],
+        "x": 1385,
+        "y": 240,
+        "wires": [
+            [
+                "19d6cea68fd12293"
+            ]
+        ]
+    },
+    {
+        "id": "7a25c51d8b944cc9",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 9",
+        "links": [],
+        "x": 905,
+        "y": 240,
+        "wires": [
+            [
+                "f005e5e1c9aaf044"
+            ]
+        ]
+    },
+    {
+        "id": "e0aa4102573da615",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "7fd750e5d3258fc3",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Stepper motor control",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1900,
+        "y": 7120,
+        "wires": []
+    },
+    {
+        "id": "6fac2377b762bc66",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "WindSafe Mode",
+        "info": "",
+        "x": 100,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "0d05d0b42506e59e",
+        "type": "serial in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "serial": "fe4749bcac384fbf",
+        "x": 1550,
+        "y": 240,
+        "wires": [
+            [
+                "77a2b13e1c6e0c41"
+            ]
+        ]
+    },
+    {
+        "id": "4a6001a5a96834b6",
+        "type": "join",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Samle Besked",
+        "mode": "custom",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "",
+        "joinerType": "str",
+        "useparts": true,
+        "accumulate": false,
+        "timeout": "2",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 400,
+        "y": 3200,
+        "wires": [
+            [
+                "function_node"
+            ]
+        ]
+    },
+    {
+        "id": "afee73fe3b102fa2",
+        "type": "ui_gauge",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "group": "282225fbd5becb71",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "MotorController Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "90",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "diff": false,
+        "className": "",
+        "x": 840,
+        "y": 3200,
+        "wires": []
+    },
+    {
+        "id": "function_node",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Fjern Ikke-Tal",
+        "func": "// Hent payload som tekst\nlet input = msg.payload.toString();\n\n// Fjern alt, der ikke er tal eller decimaltegn\nmsg.payload = input.replace(/[^0-9.]/g, '');\n\n// Konverter til et tal, hvis det ønskes\nmsg.payload = parseFloat(msg.payload);\n\n// Returnér det rensede output\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 3200,
+        "wires": [
+            [
+                "afee73fe3b102fa2",
+                "57c385ef9f808119",
+                "de4742ef7e6c97aa",
+                "41cdcaedd8833c91"
+            ]
+        ]
+    },
+    {
+        "id": "872645231e53a862",
+        "type": "trigger",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Overvågning",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "1",
+        "extend": true,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 330,
+        "y": 3440,
+        "wires": [
+            [
+                "78f99e97a0c049fe",
+                "dc582e2e84d32ff4"
+            ]
+        ]
+    },
+    {
+        "id": "78f99e97a0c049fe",
+        "type": "ui_led",
+        "z": "bf4021bb48d9c1f7",
+        "order": 1,
+        "group": "282225fbd5becb71",
+        "width": 0,
+        "height": 0,
+        "label": "Motor Controller",
+        "labelPlacement": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "LED Status",
+        "x": 490,
+        "y": 3440,
+        "wires": []
+    },
+    {
+        "id": "eb78259c3690a0ed",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "SnowClear-Mode",
+        "info": "",
+        "x": 100,
+        "y": 2820,
+        "wires": []
+    },
+    {
+        "id": "31ca6f45d0ef74d0",
+        "type": "ui_chart",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "group": "f2ab606bee991303",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature (Contol System)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 950,
+        "y": 3060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "57c385ef9f808119",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Temp Motor",
+        "mode": "link",
+        "links": [
+            "6d75dae3f0a96ce5"
+        ],
+        "x": 725,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "6d75dae3f0a96ce5",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 10",
+        "links": [
+            "57c385ef9f808119"
+        ],
+        "x": 775,
+        "y": 3120,
+        "wires": [
+            [
+                "31ca6f45d0ef74d0"
+            ]
+        ]
+    },
+    {
+        "id": "190d53e0da468f65",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manual Control- Stepper Motor",
+        "info": "",
+        "x": 150,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "76c84769a1369926",
+        "type": "ui_text_input",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Input Angle",
+        "label": "Enter Angle (degrees)",
+        "tooltip": "Indtast en vinkel (f.eks. 20 for fremad eller -20 for baglæns)",
+        "group": "7fd750e5d3258fc3",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 0,
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 210,
+        "y": 2420,
+        "wires": [
+            [
+                "32c1109c430c443c"
+            ]
+        ]
+    },
+    {
+        "id": "49190686b455f0a8",
+        "type": "ui_button",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Stop Button",
+        "group": "7fd750e5d3258fc3",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "STOP",
+        "tooltip": "Stop motoren",
+        "color": "",
+        "bgcolor": "Black",
+        "className": "",
+        "icon": "",
+        "payload": "S",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 210,
+        "y": 2460,
+        "wires": [
+            [
+                "32c1109c430c443c"
+            ]
+        ]
+    },
+    {
+        "id": "ac5fb6fea3564dd3",
+        "type": "ui_button",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Stop Button",
+        "group": "7fd750e5d3258fc3",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "STOP",
+        "tooltip": "Stop motoren",
+        "color": "",
+        "bgcolor": "Black",
+        "className": "",
+        "icon": "",
+        "payload": "S",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 550,
+        "y": 2600,
+        "wires": [
+            [
+                "c48e84df40d2e8e7"
+            ]
+        ]
+    },
+    {
+        "id": "5ba2c3cb3cb201fd",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 12",
+        "links": [
+            "b263ce4065afc13d"
+        ],
+        "x": 35,
+        "y": 2440,
+        "wires": [
+            [
+                "76c84769a1369926",
+                "49190686b455f0a8"
+            ]
+        ]
+    },
+    {
+        "id": "b263ce4065afc13d",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 7",
+        "mode": "link",
+        "links": [
+            "5ba2c3cb3cb201fd"
+        ],
+        "x": 245,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "6a9bd5dc393b1136",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 13",
+        "links": [
+            "d0d46f8c19f6cce5"
+        ],
+        "x": 35,
+        "y": 2560,
+        "wires": [
+            [
+                "26b734a31f3ff625"
+            ]
+        ]
+    },
+    {
+        "id": "d0d46f8c19f6cce5",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 8",
+        "mode": "link",
+        "links": [
+            "6a9bd5dc393b1136"
+        ],
+        "x": 245,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "6bfe1ac4c64c6d50",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 14",
+        "links": [
+            "9e9f48e887fe7cd0"
+        ],
+        "x": 35,
+        "y": 2700,
+        "wires": [
+            [
+                "8f47de7cf3fe3af2"
+            ]
+        ]
+    },
+    {
+        "id": "9e9f48e887fe7cd0",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 9",
+        "mode": "link",
+        "links": [
+            "6bfe1ac4c64c6d50"
+        ],
+        "x": 245,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "abff21b2f70f806e",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 15",
+        "links": [
+            "2760268bb7acc5c3"
+        ],
+        "x": 245,
+        "y": 3640,
+        "wires": [
+            [
+                "0007cfa0858f9986"
+            ]
+        ]
+    },
+    {
+        "id": "2760268bb7acc5c3",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 10",
+        "mode": "link",
+        "links": [
+            "abff21b2f70f806e"
+        ],
+        "x": 595,
+        "y": 3360,
+        "wires": []
+    },
+    {
+        "id": "fc736d6fe85fb502",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 16",
+        "links": [
+            "fed1ec9ee207e08f"
+        ],
+        "x": 245,
+        "y": 3680,
+        "wires": [
+            [
+                "0007cfa0858f9986"
+            ]
+        ]
+    },
+    {
+        "id": "fed1ec9ee207e08f",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 11",
+        "mode": "link",
+        "links": [
+            "fc736d6fe85fb502"
+        ],
+        "x": 595,
+        "y": 3400,
+        "wires": []
+    },
+    {
+        "id": "048c8d879e6a618a",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 17",
+        "links": [
+            "dc582e2e84d32ff4"
+        ],
+        "x": 245,
+        "y": 3720,
+        "wires": [
+            [
+                "0007cfa0858f9986"
+            ]
+        ]
+    },
+    {
+        "id": "b59162d7f555f6a2",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Naviagtion Modul",
+        "info": "",
+        "x": 100,
+        "y": 3640,
+        "wires": []
+    },
+    {
+        "id": "35899e7c16aa52a7",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "MotorController",
+        "info": "",
+        "x": 100,
+        "y": 3720,
+        "wires": []
+    },
+    {
+        "id": "ecc3275d2de0e345",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "SolarPy",
+        "info": "",
+        "x": 70,
+        "y": 3680,
+        "wires": []
+    },
+    {
+        "id": "e28c880a7c8cab7b",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 19",
+        "links": [
+            "2d993f081978cbe8"
+        ],
+        "x": 35,
+        "y": 2060,
+        "wires": [
+            [
+                "611c9056446666cc"
+            ]
+        ]
+    },
+    {
+        "id": "d1db5c5f15347132",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 13",
+        "mode": "link",
+        "links": [],
+        "x": 265,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "snow_clear_mode",
+        "type": "ui_switch",
+        "z": "bf4021bb48d9c1f7",
+        "name": "SnowClear-Mode",
+        "label": "SnowClear-Mode",
+        "tooltip": "Start SnowClear Sequence",
+        "group": "dcf24ae60f23c790",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 270,
+        "y": 2860,
+        "wires": [
+            [
+                "bea67fa9bc96f258"
+            ]
+        ]
+    },
+    {
+        "id": "5ddf6dd371c0c100",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 20",
+        "links": [
+            "83217fd3108bd07b"
+        ],
+        "x": 35,
+        "y": 2860,
+        "wires": [
+            [
+                "snow_clear_mode"
+            ]
+        ]
+    },
+    {
+        "id": "83217fd3108bd07b",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 14",
+        "mode": "link",
+        "links": [
+            "5ddf6dd371c0c100"
+        ],
+        "x": 245,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "83fd7d600b8e17fc",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Move Actuator to 139",
+        "func": "msg.topic = 'serial';\nmsg.payload = {\n    device: 'actuator',\n    command: 'move',\n    value: 139\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 2940,
+        "wires": [
+            [
+                "e560c4ccbb374e18",
+                "207d87d76740973a"
+            ]
+        ]
+    },
+    {
+        "id": "e560c4ccbb374e18",
+        "type": "delay",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Delay 20s",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 360,
+        "y": 2940,
+        "wires": [
+            [
+                "a47331f2a93a7ad4"
+            ]
+        ]
+    },
+    {
+        "id": "a47331f2a93a7ad4",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Move Actuator to 185.5",
+        "func": "msg.topic = 'serial';\nmsg.payload = {\n    device: 'actuator',\n    command: 'move',\n    value: 185.5\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 550,
+        "y": 2940,
+        "wires": [
+            [
+                "89613233a9e764dc",
+                "207d87d76740973a"
+            ]
+        ]
+    },
+    {
+        "id": "89613233a9e764dc",
+        "type": "delay",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Delay 20s",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 740,
+        "y": 2940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a09c68f7e0ec483",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Move Actuator to 279",
+        "func": "msg.topic = 'serial';\nmsg.payload = {\n    device: 'actuator',\n    command: 'move',\n    value: 279\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1290,
+        "y": 2940,
+        "wires": [
+            [
+                "207d87d76740973a"
+            ]
+        ]
+    },
+    {
+        "id": "207d87d76740973a",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 15",
+        "mode": "link",
+        "links": [
+            "156c70768e2c4bd6"
+        ],
+        "x": 1435,
+        "y": 2940,
+        "wires": []
+    },
+    {
+        "id": "de4742ef7e6c97aa",
+        "type": "ui_chart",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "group": "f2ab606bee991303",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperture (MotorController)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1110,
+        "y": 3200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "22048d7125ac2aa2",
+        "type": "ui_chart",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "group": "24ed7b8bcb3d8d60",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Activation Analysis (Windsafe-Mode)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 930,
+        "y": 2080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fcddfad19c6bb1eb",
+        "type": "ui_chart",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "group": "3be7225c93fd519d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Off-Set tracking",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 400,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "check_altitude_positive",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Check Altitude > 0 (=3)",
+        "func": "// Tjek, om vi allerede har modtaget \"3\"\nlet hasReceivedThree = context.get('receivedThree') || false;\n\n// Hvis payload er \"3\", aktiverer vi funktionen\nif (msg.payload === 3) {\n    context.set('receivedThree', true);\n    node.warn(\"Received '3'. Function is now active.\");\n    return null; // Stop yderligere behandling af denne besked\n}\n\n// Hvis funktionen er aktiveret, udfør altitude-kontrollen\nif (hasReceivedThree) {\n    const altitude = msg.payload.altitude || 0;\n    if (altitude > 0) {\n        return msg; // Send beskeden videre, hvis altitude er positiv\n    } else {\n        node.warn(\"Altitude is negative or zero. Stopping.\");\n        return null; // Stop, hvis altitude er <= 0\n    }\n} else {\n    node.warn(\"Function is not active. Waiting for '3'.\");\n    return null; // Stop, hvis \"3\" ikke er modtaget endnu\n}\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 1700,
+        "wires": [
+            [
+                "start_actuator_reset"
+            ]
+        ]
+    },
+    {
+        "id": "start_actuator_reset",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Force Down (Actuator)",
+        "func": "msg.topic = 'serial';\nmsg.payload = {\n    device: 'actuator',\n    command: 'move',\n    value: 105\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 1700,
+        "wires": [
+            [
+                "actuator_delay_10s",
+                "8c8d55e6dab64b8c"
+            ]
+        ]
+    },
+    {
+        "id": "actuator_delay_10s",
+        "type": "delay",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Delay 20s",
+        "pauseType": "delay",
+        "timeout": "20",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 600,
+        "y": 1700,
+        "wires": [
+            [
+                "24f0541453181e51"
+            ]
+        ]
+    },
+    {
+        "id": "calibrate_to_90",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Reference Point",
+        "func": "// Check if a value has already been processed\nif (context.get('processed') !== true) {\n    // Get the input value\n    let inputValue = msg.payload;\n\n    // Reverse the sign of the value\n    let outputValue = inputValue * -1;\n\n    // Mark as processed\n    context.set('processed', true);\n\n    // Send the modified value immediately\n    node.send({ payload: outputValue });\n\n    // Wait 40 seconds, then send \"4\"\n    setTimeout(() => {\n        node.send({ payload: 4 });\n    }, 40000); // 40,000 ms = 40 seconds\n\n    // Stop further processing\n    return null;\n}\n\n// If already processed, do nothing\nreturn null;\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1700,
+        "wires": [
+            [
+                "4951a98094c0380e"
+            ],
+            [
+                "4951a98094c0380e"
+            ]
+        ]
+    },
+    {
+        "id": "start_tracking",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Start Tracking",
+        "func": "// Tjek, om funktionen er aktiveret af at have modtaget \"4\"\nlet isActivated = context.get('activated') || false;\n\n// Hvis payload er \"4\", aktiver funktionen\nif (msg.payload === 4) {\n    context.set('activated', true);\n    node.warn(\"Function activated. Ready to process values.\");\n    return null; // Stop behandling af denne besked\n}\n\n// Hvis funktionen er aktiveret, behandl værdierne\nif (isActivated) {\n    // Tjek, om Altitude er over 0\n    if (msg.payload.altitude > 0) {\n        // Send 'altitude' og 'azimuth' som separate payloads\n        node.send([\n            { payload: { flow: 'altitude', value: msg.payload.altitude } },\n            { payload: { flow: 'azimuth', value: msg.payload.azimuth } }\n        ]);\n        return null; // Stop yderligere behandling\n    } else {\n        // Hvis Altitude <= 0, log en advarsel og ignorér beskeden\n        node.warn(\"Altitude is not positive. Stopping.\");\n        return null;\n    }\n}\n\n// Hvis funktionen ikke er aktiveret, ignorér beskeden\nnode.warn(\"Function not activated. Waiting for '4'.\");\nreturn null;\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1840,
+        "wires": [
+            [
+                "altitude_conversion"
+            ],
+            [
+                "azimuth_conversion"
+            ]
+        ]
+    },
+    {
+        "id": "azimuth_conversion",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Azimuth to Stepper",
+        "func": "// Initial heading for stepper motor (default start at 90 degrees)\nconst initialHeading = 90;\n\n// Retrieve the last stored Azimuth value from context\nlet previousAzimuth = context.get('previousAzimuth') || initialHeading;\n\n// Current Azimuth value received from input\nlet currentAzimuth = msg.payload;\n\n// Calculate the difference between current and previous Azimuth\nlet difference = currentAzimuth - previousAzimuth;\n\n// Adjust the sign: positive becomes negative, negative becomes positive\nlet stepperOutput = difference * -1;\n\n// Store the current Azimuth as the new previous value for future calculations\ncontext.set('previousAzimuth', currentAzimuth);\n\n// Prepare the output message for the stepper motor\nmsg.payload = {\n    device: 'stepperMotor',\n    command: 'move',\n    value: stepperOutput\n};\n\n// Return the message for the stepper motor\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1860,
+        "wires": [
+            [
+                "7d4bfe6dfb99e9d9"
+            ]
+        ]
+    },
+    {
+        "id": "512b631ffb243768",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 22",
+        "links": [],
+        "x": 195,
+        "y": 1780,
+        "wires": [
+            [
+                "start_tracking"
+            ]
+        ]
+    },
+    {
+        "id": "55cb5ab3dbb0e4ea",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 23",
+        "links": [],
+        "x": 195,
+        "y": 1820,
+        "wires": [
+            [
+                "start_tracking"
+            ]
+        ]
+    },
+    {
+        "id": "7d4bfe6dfb99e9d9",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 17",
+        "mode": "link",
+        "links": [
+            "85598fbfb1da2e6b"
+        ],
+        "x": 655,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "d5b46a1f981d2798",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 18",
+        "mode": "link",
+        "links": [
+            "d02b31d9e6ff036f"
+        ],
+        "x": 655,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "f626c428aceb41e0",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 24",
+        "links": [
+            "24084b7624b8789a"
+        ],
+        "x": 575,
+        "y": 1660,
+        "wires": [
+            [
+                "24f0541453181e51"
+            ]
+        ]
+    },
+    {
+        "id": "063670050fe925ed",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Kompass- Input",
+        "info": "",
+        "x": 480,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "8558508667c1e0e0",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Stepper Motor",
+        "info": "",
+        "x": 750,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "8e5d5f17397991c6",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Aktuator",
+        "info": "",
+        "x": 740,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "947af26a573c24c3",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Azimuth (Input)",
+        "info": "",
+        "x": 100,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "452bbe12d5d44f94",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Altitude (Input)",
+        "info": "",
+        "x": 100,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "feb55e995455c504",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 25",
+        "links": [
+            "46af7152fb6e3c52"
+        ],
+        "x": 35,
+        "y": 1140,
+        "wires": [
+            [
+                "6a762f15ce86167e"
+            ]
+        ]
+    },
+    {
+        "id": "46af7152fb6e3c52",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 19",
+        "mode": "link",
+        "links": [
+            "feb55e995455c504"
+        ],
+        "x": 445,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "0007cfa0858f9986",
+        "type": "e-mail",
+        "z": "bf4021bb48d9c1f7",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "",
+        "dname": "System failure",
+        "x": 420,
+        "y": 3700,
+        "wires": []
+    },
+    {
+        "id": "77a2b13e1c6e0c41",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 21",
+        "mode": "link",
+        "links": [
+            "94e75fe82609fe23"
+        ],
+        "x": 1665,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "94e75fe82609fe23",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 26",
+        "links": [
+            "77a2b13e1c6e0c41"
+        ],
+        "x": 285,
+        "y": 3200,
+        "wires": [
+            [
+                "4a6001a5a96834b6"
+            ]
+        ]
+    },
+    {
+        "id": "e1d8f8396ba186e2",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "MotorController (Aktuator)",
+        "info": "",
+        "x": 1230,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "bb798690c8201572",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "MotorController (Stepper Motor)",
+        "info": "",
+        "x": 730,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b0ee20e4c0fd897e",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 22",
+        "mode": "link",
+        "links": [
+            "409f32e4e3d454e6"
+        ],
+        "x": 255,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "409f32e4e3d454e6",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 27",
+        "links": [
+            "b0ee20e4c0fd897e"
+        ],
+        "x": 35,
+        "y": 480,
+        "wires": [
+            [
+                "1fee6e0f46ee6958",
+                "283039958a81b972"
+            ]
+        ]
+    },
+    {
+        "id": "e19bd9aa263d1e9c",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 28",
+        "links": [
+            "baac40780ffa3c13"
+        ],
+        "x": 35,
+        "y": 680,
+        "wires": [
+            [
+                "08cc4a3eb2c8f526",
+                "a8c305525f4f4c45"
+            ]
+        ]
+    },
+    {
+        "id": "baac40780ffa3c13",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 23",
+        "mode": "link",
+        "links": [
+            "e19bd9aa263d1e9c"
+        ],
+        "x": 255,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c6a49da02de47faf",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 24",
+        "mode": "link",
+        "links": [
+            "b360aca9d69a0a92"
+        ],
+        "x": 255,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b360aca9d69a0a92",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 29",
+        "links": [
+            "c6a49da02de47faf"
+        ],
+        "x": 35,
+        "y": 820,
+        "wires": [
+            [
+                "9f64b3f02d778a42"
+            ]
+        ]
+    },
+    {
+        "id": "bcccc45af2170df2",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 30",
+        "links": [
+            "b52eb2d6b054bf49"
+        ],
+        "x": 35,
+        "y": 960,
+        "wires": [
+            [
+                "e322fe3778d6bd1d"
+            ]
+        ]
+    },
+    {
+        "id": "b52eb2d6b054bf49",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 25",
+        "mode": "link",
+        "links": [
+            "bcccc45af2170df2"
+        ],
+        "x": 255,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "df7241a9e03e7cee",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Input (Compass)",
+        "links": [
+            "2daf36f8d56f6a99"
+        ],
+        "x": 35,
+        "y": 1060,
+        "wires": [
+            [
+                "413e304320efbacd"
+            ]
+        ]
+    },
+    {
+        "id": "2daf36f8d56f6a99",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 26",
+        "mode": "link",
+        "links": [
+            "df7241a9e03e7cee"
+        ],
+        "x": 255,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ea03b19d48a7c64e",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Heading (Compass)",
+        "info": "",
+        "x": 360,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "c7ec163c9526eb09",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "latitude and Longitude (GPS)",
+        "info": "",
+        "x": 390,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "502bf38d40added5",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Mapping",
+        "info": "",
+        "x": 330,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "588260319c3f8264",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Weather API",
+        "info": "",
+        "x": 340,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d721649b994ab99e",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Compass off-set",
+        "info": "",
+        "x": 350,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4ea8a440bf019b35",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 32",
+        "links": [
+            "4d750328b2ee23fd"
+        ],
+        "x": 195,
+        "y": 3360,
+        "wires": [
+            [
+                "e4386e1f256a7c9a"
+            ]
+        ]
+    },
+    {
+        "id": "4d750328b2ee23fd",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 27",
+        "mode": "link",
+        "links": [
+            "4ea8a440bf019b35"
+        ],
+        "x": 255,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "752a39abf91674e8",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "LED-Status",
+        "info": "",
+        "x": 350,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d2d0210b99e8f983",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Naviagtion Modul",
+        "info": "",
+        "x": 100,
+        "y": 3360,
+        "wires": []
+    },
+    {
+        "id": "4ab2434e7a915857",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "SolarPy",
+        "info": "",
+        "x": 70,
+        "y": 3400,
+        "wires": []
+    },
+    {
+        "id": "c18d644d61dc1202",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Heading (Compass)",
+        "info": "",
+        "x": 110,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "528b735cf374e722",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "latitude and Longitude (GPS)",
+        "info": "",
+        "x": 140,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "bc5e1510e1e274fa",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Mapping",
+        "info": "",
+        "x": 80,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "27a362e26d4079d7",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 33",
+        "links": [
+            "33ffe7d2b09a4799"
+        ],
+        "x": 35,
+        "y": 1100,
+        "wires": [
+            [
+                "413e304320efbacd"
+            ]
+        ]
+    },
+    {
+        "id": "33ffe7d2b09a4799",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 28",
+        "mode": "link",
+        "links": [
+            "27a362e26d4079d7"
+        ],
+        "x": 475,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "130beec052eb9375",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 34",
+        "links": [
+            "a46ba58a0f504ff6"
+        ],
+        "x": 135,
+        "y": 3400,
+        "wires": [
+            [
+                "e5041ed0c1eefde6"
+            ]
+        ]
+    },
+    {
+        "id": "a46ba58a0f504ff6",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 29",
+        "mode": "link",
+        "links": [
+            "130beec052eb9375"
+        ],
+        "x": 235,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "e457dd5f3a26178d",
+        "type": "trigger",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Overvågning",
+        "op1": "true",
+        "op2": "false",
+        "op1type": "bool",
+        "op2type": "bool",
+        "duration": "1",
+        "extend": true,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "outputs": 1,
+        "x": 330,
+        "y": 3480,
+        "wires": [
+            [
+                "766d9d690fd4d8c4",
+                "50a7c07b9afc187a"
+            ]
+        ]
+    },
+    {
+        "id": "762b2bcb60eb5ddf",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 35",
+        "links": [
+            "41cdcaedd8833c91"
+        ],
+        "x": 195,
+        "y": 3440,
+        "wires": [
+            [
+                "872645231e53a862"
+            ]
+        ]
+    },
+    {
+        "id": "41cdcaedd8833c91",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 30",
+        "mode": "link",
+        "links": [
+            "762b2bcb60eb5ddf"
+        ],
+        "x": 725,
+        "y": 3240,
+        "wires": []
+    },
+    {
+        "id": "ae33d0afdcd4848c",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "MotorController",
+        "info": "",
+        "x": 100,
+        "y": 3440,
+        "wires": []
+    },
+    {
+        "id": "8311e330ad557307",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Smart Inveter system",
+        "info": "Smart Inveter system\n",
+        "x": 120,
+        "y": 3480,
+        "wires": []
+    },
+    {
+        "id": "5bf6432aeaf1660e",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 36",
+        "links": [],
+        "x": 235,
+        "y": 3480,
+        "wires": [
+            [
+                "e457dd5f3a26178d"
+            ]
+        ]
+    },
+    {
+        "id": "dc582e2e84d32ff4",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 31",
+        "mode": "link",
+        "links": [
+            "048c8d879e6a618a"
+        ],
+        "x": 595,
+        "y": 3440,
+        "wires": []
+    },
+    {
+        "id": "fa5c13d9d2806f14",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Smart Inveter system",
+        "info": "Smart Inveter system\n",
+        "x": 120,
+        "y": 3760,
+        "wires": []
+    },
+    {
+        "id": "06d5de67b953cd1b",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 37",
+        "links": [
+            "50a7c07b9afc187a"
+        ],
+        "x": 245,
+        "y": 3760,
+        "wires": [
+            [
+                "0007cfa0858f9986"
+            ]
+        ]
+    },
+    {
+        "id": "50a7c07b9afc187a",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 32",
+        "mode": "link",
+        "links": [
+            "06d5de67b953cd1b"
+        ],
+        "x": 595,
+        "y": 3480,
+        "wires": []
+    },
+    {
+        "id": "4ed4a7b8c08991b9",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "LED Status",
+        "info": "",
+        "x": 90,
+        "y": 3300,
+        "wires": []
+    },
+    {
+        "id": "82c3f29b16b3df1d",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Email sender",
+        "info": "",
+        "x": 90,
+        "y": 3580,
+        "wires": []
+    },
+    {
+        "id": "c96c9df594616508",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 38",
+        "links": [
+            "23a1d8c2b363c16d"
+        ],
+        "x": 35,
+        "y": 1180,
+        "wires": [
+            [
+                "6a762f15ce86167e",
+                "355540e8ea68e492"
+            ]
+        ]
+    },
+    {
+        "id": "23a1d8c2b363c16d",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 33",
+        "mode": "link",
+        "links": [
+            "c96c9df594616508"
+        ],
+        "x": 475,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "0d3881b13a44eadc",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Off-set Analysis",
+        "info": "",
+        "x": 580,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "5e5a839c857b1608",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Off-set Analysis",
+        "info": "",
+        "x": 580,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "8c7dbbe4d1958e94",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "LED",
+        "info": "",
+        "x": 310,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "14296dadf7f03ed2",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Sunset",
+        "mode": "link",
+        "links": [
+            "537ee720a6b6410c"
+        ],
+        "x": 1505,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "6a762f15ce86167e",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Rewirter",
+        "func": "// Parse input payload\nlet input = msg.payload;\n\n// Check if input contains \"value\"\nif (input && input.value !== undefined) {\n    // Extract only the numerical value\n    msg.payload = input.value;\n} else {\n    // Set payload to null if value is missing\n    msg.payload = null;\n}\n\n// Return the modified message\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 1160,
+        "wires": [
+            [
+                "61683359032521eb",
+                "24084b7624b8789a"
+            ]
+        ]
+    },
+    {
+        "id": "355540e8ea68e492",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "function 7",
+        "func": "// Parse input payload\nlet input = msg.payload;\n\n// Check if input contains \"Azimuth\"\nif (input && input.Azimuth !== undefined) {\n    // Extract only the Azimuth value\n    msg.payload = input.Azimuth;\n} else {\n    // Set payload to null if Azimuth is missing\n    msg.payload = null;\n}\n\n// Return the modified message\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 1200,
+        "wires": [
+            [
+                "61683359032521eb"
+            ]
+        ]
+    },
+    {
+        "id": "2d993f081978cbe8",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 34",
+        "mode": "link",
+        "links": [
+            "e28c880a7c8cab7b"
+        ],
+        "x": 265,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "4d30142382779eb7",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manuel Kontrol (Tilslutning)",
+        "info": "",
+        "x": 140,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "bd1b1de7e3e7cc18",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manual Control - Actuator",
+        "info": "",
+        "x": 370,
+        "y": 2240,
+        "wires": []
+    },
+    {
+        "id": "dd2719ab49a11f1c",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manual Control- Stepper Motor",
+        "info": "",
+        "x": 390,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "f59533ace87cdac6",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manual Control -Ground Mode",
+        "info": "",
+        "x": 390,
+        "y": 2280,
+        "wires": []
+    },
+    {
+        "id": "14870ae76db2420c",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "SnowClear-Mode",
+        "info": "",
+        "x": 340,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "d7d388020a5f2fd4",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Contol System Temperature",
+        "info": "",
+        "x": 140,
+        "y": 3120,
+        "wires": []
+    },
+    {
+        "id": "2441dba990fb2864",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "MotorController Temperature",
+        "info": "",
+        "x": 140,
+        "y": 3200,
+        "wires": []
+    },
+    {
+        "id": "21d59f6d3cb2f8cc",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manual Control - Ground Mode",
+        "info": "",
+        "x": 750,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "9b1a8e37cab1bb52",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manual Control- Stepper Motor",
+        "info": "",
+        "x": 750,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f54a151b572a2941",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "SnowClear-Mode",
+        "info": "",
+        "x": 800,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b01bc64cfab5cc80",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Autonom Control",
+        "info": "",
+        "x": 800,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1195b6bb841bc073",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Force Down (Actuator)",
+        "func": "// Check if the payload is equal to 1\nif (msg.payload === 1) {\n    // Send \"105\" as a string to the actuator\n    msg.payload = \"105\";\n    return msg;\n} else {\n    // If the condition is not met, return null\n    return null;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 2000,
+        "wires": [
+            [
+                "336b8244833fc4e9"
+            ]
+        ]
+    },
+    {
+        "id": "cd8fa9b4c1fdad71",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Stop (Stepper motor)",
+        "func": "",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 2040,
+        "wires": [
+            [
+                "29c1621ec75a863a"
+            ]
+        ]
+    },
+    {
+        "id": "29c1621ec75a863a",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 35",
+        "mode": "link",
+        "links": [
+            "8e4210d7cab74919"
+        ],
+        "x": 1065,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "8e4210d7cab74919",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 41",
+        "links": [
+            "29c1621ec75a863a"
+        ],
+        "x": 905,
+        "y": 280,
+        "wires": [
+            [
+                "f005e5e1c9aaf044"
+            ]
+        ]
+    },
+    {
+        "id": "125a23e1e65d07b8",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "WindSafe-Mode",
+        "info": "",
+        "x": 800,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ed8292e80a37e846",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "WindSafe-Mode",
+        "info": "",
+        "x": 1280,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "7cf4f04f49b4c72e",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Temperature",
+        "info": "",
+        "x": 1750,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8458cf30cd885590",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Windspeed",
+        "info": "",
+        "x": 430,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "2c1b0126e7f83d43",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manual Control - Actuator",
+        "info": "",
+        "x": 1250,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "320fd7a42bc0c4ce",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Manual Control - Ground Mode",
+        "info": "",
+        "x": 1230,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7c95df422c8f84a4",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Autonom Control",
+        "info": "",
+        "x": 1280,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "156c70768e2c4bd6",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 42",
+        "links": [
+            "207d87d76740973a"
+        ],
+        "x": 1385,
+        "y": 280,
+        "wires": [
+            [
+                "19d6cea68fd12293"
+            ]
+        ]
+    },
+    {
+        "id": "eca699559e731f61",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "SnowClear-Mode",
+        "info": "",
+        "x": 1280,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "buttonClear",
+        "type": "ui_button",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Clear Graph",
+        "group": "3be7225c93fd519d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear data",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 170,
+        "y": 1240,
+        "wires": [
+            [
+                "61683359032521eb"
+            ]
+        ]
+    },
+    {
+        "id": "e42bb9f49ffe8993",
+        "type": "ui_button",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Clear Graph",
+        "group": "3be7225c93fd519d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear data",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 170,
+        "y": 1120,
+        "wires": [
+            [
+                "fcddfad19c6bb1eb"
+            ]
+        ]
+    },
+    {
+        "id": "7e77ef7876606558",
+        "type": "ui_button",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Clear Graph",
+        "group": "24ed7b8bcb3d8d60",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear data",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 670,
+        "y": 2100,
+        "wires": [
+            [
+                "22048d7125ac2aa2"
+            ]
+        ]
+    },
+    {
+        "id": "86192029848f8935",
+        "type": "ui_button",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Clear Graph",
+        "group": "24ed7b8bcb3d8d60",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear data",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 1190,
+        "y": 800,
+        "wires": [
+            [
+                "ea7ceabf22c945bd"
+            ]
+        ]
+    },
+    {
+        "id": "eb73c029903240d1",
+        "type": "ui_button",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Clear Graph",
+        "group": "f2ab606bee991303",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear data",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 890,
+        "y": 3240,
+        "wires": [
+            [
+                "de4742ef7e6c97aa"
+            ]
+        ]
+    },
+    {
+        "id": "b1c6cd346b7009b8",
+        "type": "ui_button",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Clear Graph",
+        "group": "f2ab606bee991303",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Clear data",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "black",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 730,
+        "y": 3080,
+        "wires": [
+            [
+                "31ca6f45d0ef74d0"
+            ]
+        ]
+    },
+    {
+        "id": "7bcba3704f4e0eeb",
+        "type": "ui_text",
+        "z": "bf4021bb48d9c1f7",
+        "group": "7fd750e5d3258fc3",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Enter the angle of the stepper motor",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1910,
+        "y": 7160,
+        "wires": []
+    },
+    {
+        "id": "7f870bed8749d2af",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 43",
+        "links": [
+            "4951a98094c0380e"
+        ],
+        "x": 195,
+        "y": 1860,
+        "wires": [
+            [
+                "start_tracking"
+            ]
+        ]
+    },
+    {
+        "id": "4951a98094c0380e",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 36",
+        "mode": "link",
+        "links": [
+            "7f870bed8749d2af"
+        ],
+        "x": 1075,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "b0c1aa109ff103cd",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Tracking =4",
+        "info": "",
+        "x": 90,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "00e8ab505ec121d8",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Check Snow",
+        "func": "// Check if input has \"Snow\" and it's true\nif (msg.payload.Snow === true) {\n    // Set the payload to 2\n    msg.payload = 2;\n    return msg; // Send the message\n} else {\n    // If no snow, send 3 instead\n    msg.payload = 3;\n    return msg; // Send the message\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1600,
+        "wires": [
+            [
+                "6118ebc7b00bc64c"
+            ]
+        ]
+    },
+    {
+        "id": "537ee720a6b6410c",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 44",
+        "links": [
+            "14296dadf7f03ed2"
+        ],
+        "x": 315,
+        "y": 1560,
+        "wires": [
+            [
+                "00e8ab505ec121d8"
+            ]
+        ]
+    },
+    {
+        "id": "8c8d55e6dab64b8c",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 37",
+        "mode": "link",
+        "links": [
+            "d02b31d9e6ff036f"
+        ],
+        "x": 555,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "24084b7624b8789a",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 38",
+        "mode": "link",
+        "links": [
+            "f626c428aceb41e0",
+            "c5d30b03483f33c0"
+        ],
+        "x": 315,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "24f0541453181e51",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Kompass Deviation",
+        "func": "// Input fra msg.payload er allerede et tal\nlet inputValue = msg.payload;\n\n// Fast værdi for sammenligning\nconst fixedValue = 90;\n\n// Beregn forskellen\nlet difference = Math.abs(fixedValue - inputValue);\n\n// Returner forskellen\nmsg.payload = difference;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1700,
+        "wires": [
+            [
+                "calibrate_to_90"
+            ]
+        ]
+    },
+    {
+        "id": "e8b4d6205a43a76a",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 45",
+        "links": [
+            "6118ebc7b00bc64c"
+        ],
+        "x": 35,
+        "y": 2900,
+        "wires": [
+            [
+                "04ed9f1095f91186"
+            ]
+        ]
+    },
+    {
+        "id": "6118ebc7b00bc64c",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 39",
+        "mode": "link",
+        "links": [
+            "24e27f1d16f6a983",
+            "e8b4d6205a43a76a"
+        ],
+        "x": 535,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "04ed9f1095f91186",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "=2",
+        "func": "if (msg.payload === 2) {\n    // Send \"ON\" først\n    node.send({ payload: \"ON\" });\n    \n    // Vent 30 sekunder, og send derefter \"OFF\"\n    setTimeout(() => {\n        node.send({ payload: \"OFF\" });\n    }, 30000); // 30 sekunder\n}\n\n// Stop yderligere behandling\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 110,
+        "y": 2900,
+        "wires": [
+            [
+                "snow_clear_mode"
+            ]
+        ]
+    },
+    {
+        "id": "24e27f1d16f6a983",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 46",
+        "links": [
+            "6118ebc7b00bc64c"
+        ],
+        "x": 35,
+        "y": 1700,
+        "wires": [
+            [
+                "check_altitude_positive"
+            ]
+        ]
+    },
+    {
+        "id": "3f025b834ddc3ab5",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Send =2 or 3 (SnowClear-Mode)",
+        "info": "",
+        "x": 690,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "altitude_conversion",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Altitude to Length",
+        "func": "// Konstanter til vinkel og længde konvertering\nconst minAngle = 0;          // Minimum vinkel (grader)\nconst maxAngle = 77.16;      // Maksimum vinkel (grader)\nconst minLength = 92;        // Minimum længde (mm)\nconst maxLength = 279;       // Maksimum længde (mm)\n\n// Input vinkel fra SolarPy\nlet inputAngle = msg.payload.altitude || 105; // Default til 0, hvis ingen værdi\n\n// Tjek om vinklen er inden for det tilladte interval\nif (inputAngle < minAngle || inputAngle > maxAngle) {\n    return { payload: `Fejl: Vinkel skal være mellem ${minAngle}° og ${maxAngle}°` };\n}\n\n// Konverter vinkel til længde\nlet length = minLength + ((inputAngle - minAngle) / (maxAngle - minAngle)) * (maxLength - minLength);\n\n// Tjek om længden er inden for det gyldige interval\nif (length < minLength || length > maxLength) {\n    return { payload: `Fejl: Længde skal være mellem ${minLength} mm og ${maxLength} mm` };\n}\n\n// Forbered beskeden til aktuatoren\nmsg.topic = 'serial';\nmsg.payload = {\n    device: 'actuator',\n    command: 'move',\n    value: length\n};\n\n// Returner beskeden\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1820,
+        "wires": [
+            [
+                "d5b46a1f981d2798"
+            ]
+        ]
+    },
+    {
+        "id": "1",
+        "type": "inject",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Trigger every 15 min",
+        "props": [],
+        "repeat": "900",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 120,
+        "y": 1900,
+        "wires": [
+            [
+                "start_tracking"
+            ]
+        ]
+    },
+    {
+        "id": "4ba5907a92cccc25",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Autonom Control (Compass)",
+        "info": "",
+        "x": 460,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "f4135a67a14e3d74",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Snow",
+        "info": "",
+        "x": 390,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "04a2fae11e89a689",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Autonom Control",
+        "info": "",
+        "x": 1600,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "aa6b8a64452dd88a",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "WindSafe Mode",
+        "info": "",
+        "x": 1600,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "167c59cf2b5dbad8",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Turn West (270 grader)",
+        "func": "// Check if a value has already been processed\nif (context.get('processed') !== true) {\n    // Get the input value\n    let inputValue = msg.payload;\n\n    // Reverse the sign of the value\n    let outputValue = inputValue * -1;\n\n    // Mark as processed\n    context.set('processed', true);\n\n    // Send the modified value immediately\n    node.send({ payload: outputValue });\n\n    // Wait 40 seconds, then send \"4\"\n    setTimeout(() => {\n        node.send({ payload: 4 });\n    }, 40000); // 40,000 ms = 40 seconds\n\n    // Stop further processing\n    return null;\n}\n\n// If already processed, do nothing\nreturn null;\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 2860,
+        "wires": [
+            [
+                "c9e24608b57aef38"
+            ],
+            [
+                "6529662976469e9d"
+            ]
+        ]
+    },
+    {
+        "id": "c5d30b03483f33c0",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 47",
+        "links": [
+            "24084b7624b8789a"
+        ],
+        "x": 405,
+        "y": 2820,
+        "wires": [
+            [
+                "bea67fa9bc96f258"
+            ]
+        ]
+    },
+    {
+        "id": "d9e7e793f079f7c7",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Kompass- Input",
+        "info": "",
+        "x": 300,
+        "y": 2820,
+        "wires": []
+    },
+    {
+        "id": "bea67fa9bc96f258",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Kompass Deviation",
+        "func": "// Input fra msg.payload\nlet inputValue = msg.payload;\n\n// Fast værdi for sammenligning (270 grader)\nconst fixedValue = 270;\n\n// Beregn forskellen\nlet difference = inputValue - fixedValue;\n\n// Returner kun forskellen som payload\nmsg.payload = difference;\nreturn msg; // Kun ét output\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 2860,
+        "wires": [
+            [
+                "167c59cf2b5dbad8"
+            ]
+        ]
+    },
+    {
+        "id": "c9e24608b57aef38",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 40",
+        "mode": "link",
+        "links": [
+            "dbffc693d05e11fa"
+        ],
+        "x": 905,
+        "y": 2820,
+        "wires": []
+    },
+    {
+        "id": "6529662976469e9d",
+        "type": "delay",
+        "z": "bf4021bb48d9c1f7",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "40",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 940,
+        "y": 2860,
+        "wires": [
+            [
+                "4fdb4f2ce6c48db7"
+            ]
+        ]
+    },
+    {
+        "id": "3e14ed7bcb151fb0",
+        "type": "function",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Move Actuator to 232",
+        "func": "msg.topic = 'serial';\nmsg.payload = {\n    device: 'actuator',\n    command: 'move',\n    value: 232\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 930,
+        "y": 2940,
+        "wires": [
+            [
+                "6343e9696b82d10d",
+                "207d87d76740973a"
+            ]
+        ]
+    },
+    {
+        "id": "6343e9696b82d10d",
+        "type": "delay",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Delay 10s",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 1110,
+        "y": 2940,
+        "wires": [
+            [
+                "5a09c68f7e0ec483"
+            ]
+        ]
+    },
+    {
+        "id": "6ac2b7636c1ffadd",
+        "type": "link in",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link in 48",
+        "links": [
+            "4fdb4f2ce6c48db7"
+        ],
+        "x": 35,
+        "y": 2940,
+        "wires": [
+            [
+                "83fd7d600b8e17fc"
+            ]
+        ]
+    },
+    {
+        "id": "4fdb4f2ce6c48db7",
+        "type": "link out",
+        "z": "bf4021bb48d9c1f7",
+        "name": "link out 41",
+        "mode": "link",
+        "links": [
+            "6ac2b7636c1ffadd"
+        ],
+        "x": 1055,
+        "y": 2860,
+        "wires": []
+    },
+    {
+        "id": "5a16d1422da692c8",
+        "type": "comment",
+        "z": "bf4021bb48d9c1f7",
+        "name": "Then Actuator",
+        "info": "",
+        "x": 1150,
+        "y": 2860,
+        "wires": []
+    }
+]
